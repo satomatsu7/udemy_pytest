@@ -8,6 +8,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
@@ -20,3 +21,10 @@ jobs:
     - name: Run tests
       run: |
         pytest
+
+      # # テスト結果をプルリクにコメントする
+      # - name: Pytest coverage comment
+      #   uses: MishaKav/pytest-coverage-comment@main
+      #   with:
+      #     pytest-coverage-path: ./pytest-coverage.txt
+      #     junitxml-path: ./pytest.xml
