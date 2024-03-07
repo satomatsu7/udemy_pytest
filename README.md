@@ -1,2 +1,1 @@
-# udemy_pytest
-test
+# udemy_pytest用のコード類
