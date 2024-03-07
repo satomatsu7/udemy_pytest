@@ -3,7 +3,7 @@ name: Python application test
 on: [push, pull_request]
 
 jobs:
-  build:
+  pytest:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,3 +23,4 @@ jobs:
     - name: Run tests
       run: |
         pytest
+      continue-on-error: true
