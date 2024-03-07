@@ -1,0 +1,35 @@
+最初：
+環境変数の設定
+export PYTHONPATH="/Users/satoshi/work/udemy/pytest/src:$PYTHONPATH"
+
+bank_account5：
+conftest.pyは配置するディレクトリによって、影響範囲が異なることを説明する
+
+bank_account6：
+pytest.iniの使用（マーカーを定義する）
+
+bank_account6：
+特定のマーカーのみ実行するコマンド（例：raisesマーカーのみ）
+pytest -m raises
+
+bank_account6：
+特定のマーカーを除いて実行するコマンド（例：raisesマーカー以外）
+pytest -m "not raises"
+
+bank_account7後：
+全テストをまとめて実行するコマンド
+pytest
+
+bank_account7後：
+特定のディレクトリのテストを実行するコマンド（例：tests/test_bankディレクトリのテストを実行するパターン）
+pytest tests/test_bank
+
+最後：
+カバレッジ
+pytest -v --cov="./tests/test_bank"
+
+カバレッジ（missの行数も出力）
+pytest -v --cov="./tests/test_bank" --cov-report=term-missing
+
+カバレッジ（HTML出力）
+pytest -v --cov="./tests/test_bank" --cov-report=html
