@@ -1,6 +1,8 @@
-最初：
 環境変数の設定
 export PYTHONPATH="/Users/satoshi/work/udemy/pytest/src:$PYTHONPATH"
+
+仮想環境構築
+source .venv/bin/activate  
 
 bank_account5：
 conftest.pyは配置するディレクトリによって、影響範囲が異なることを説明する
